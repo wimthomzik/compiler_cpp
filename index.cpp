@@ -41,3 +41,17 @@ struct Token {
     int precedence; //precedence of C++ operators stores as integers (see table for order)
     int associativity; //associativity of C++ operators stored as precedence integers (see table for order)
 };
+
+//define class lexer that is going through source code
+class Lexer {
+    public:
+
+    //Data members (variables to be used)
+    std::string sourceCode;
+
+    //member functions [void name_function(){}]
+};
+
+int main() {
+    return 0;
+}
