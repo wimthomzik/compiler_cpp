@@ -44,12 +44,19 @@ struct Token {
 
 //define class lexer that is going through source code
 class Lexer {
-    public:
+    public: //Access specifier
 
-    //Data members (variables to be used)
-    std::string sourceCode;
+    //Create constructor (special method that is automatically called when a object of the class is created) that creates an instance of the lexer and passing in the source code
+    //Parameter of method: input sourceCode as a const to avoid changes within constructor; & is a reference to use original string and not using a copy
+    Lexer(const std::string& sourceCode) : sourceCode(sourceCode), currentPosition(0) {} //member initializer list creates member variables of the class
+
 
     //member functions [void name_function(){}]
+
+    private: 
+    //Data members (variables to be used)
+    std::string sourceCode;
+    size_t currentPosition; //size_t datatype used to represent size of objects and is used as return type of lenght()
 };
 
 int main() {
